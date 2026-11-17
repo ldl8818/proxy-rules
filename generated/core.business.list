@@ -1,4 +1,1 @@
 # Generated; edit ../core.list instead.
-PROCESS-PATH-REGEX,(?i)^.*/(Cursor)[.]app/.*$
-PROCESS-NAME-REGEX,(?i)^(cursor)([.]exe)?$
-IN-NAME,business-cursor

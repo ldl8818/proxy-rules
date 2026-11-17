@@ -1,2 +1,5 @@
 # 核心业务专线：每行使用 DOMAIN-SUFFIX,域名；只填域名，不填 URL 路径。
 # 覆盖根域名和子域名；同一域名只放一份清单。当前为空，可直接在下方新增。
+
+# Temporary validation; existing Cursor core exit is unchanged.
+DOMAIN-SUFFIX,cursor.com

@@ -1,0 +1,448 @@
+{
+  "version": 1,
+  "families": {
+    "claude": {
+      "anchors": [
+        "claude.ai",
+        "anthropic.com",
+        "claudeusercontent.com",
+        "claude.com",
+        "claude.app",
+        "clau.de",
+        "claude.dev",
+        "claude.site",
+        "claudemcpclient.com",
+        "claudemcpcontent.com"
+      ],
+      "rules": [
+        "DOMAIN,accounts.google.com",
+        "DOMAIN-SUFFIX,anthropic.com",
+        "DOMAIN-SUFFIX,claude.ai",
+        "DOMAIN-SUFFIX,claude.com",
+        "DOMAIN-SUFFIX,clau.de",
+        "DOMAIN-SUFFIX,claudemcpclient.com",
+        "DOMAIN-SUFFIX,claudemcpcontent.com",
+        "DOMAIN-SUFFIX,claudeusercontent.com",
+        "DOMAIN,anthropic.com.cdn.cloudflare.net",
+        "DOMAIN,servd-anthropic-website.b-cdn.net",
+        "DOMAIN,anthropic.auth0.com",
+        "DOMAIN,anthropic-com.ghost.io",
+        "DOMAIN,challenges.cloudflare.com",
+        "DOMAIN-SUFFIX,hcaptcha.com",
+        "DOMAIN-SUFFIX,withpersona.com",
+        "DOMAIN-SUFFIX,sentry.io",
+        "DOMAIN-SUFFIX,statsigapi.net",
+        "DOMAIN-SUFFIX,segment.io",
+        "DOMAIN-SUFFIX,growthbook.io",
+        "DOMAIN,browser-intake-us5-datadoghq.com",
+        "DOMAIN-KEYWORD,datadog",
+        "DOMAIN-KEYWORD,sentry",
+        "DOMAIN-KEYWORD,sift",
+        "DOMAIN-SUFFIX,stripe.com",
+        "DOMAIN-SUFFIX,stripe.network",
+        "DOMAIN-SUFFIX,stripecdn.com",
+        "DOMAIN-SUFFIX,intercom.io",
+        "DOMAIN-SUFFIX,intercomcdn.com",
+        "DOMAIN-SUFFIX,usefathom.com",
+        "DOMAIN,time.apple.com",
+        "DOMAIN,time.asia.apple.com",
+        "DOMAIN,time.euro.apple.com",
+        "DOMAIN,time.aws.com",
+        "DOMAIN,time.cloudflare.com",
+        "DOMAIN,time.facebook.com",
+        "DOMAIN,time1.facebook.com",
+        "DOMAIN,time2.facebook.com",
+        "DOMAIN,time3.facebook.com",
+        "DOMAIN,time4.facebook.com",
+        "DOMAIN,time5.facebook.com",
+        "DOMAIN,time.google.com",
+        "DOMAIN,time1.google.com",
+        "DOMAIN,time2.google.com",
+        "DOMAIN,time3.google.com",
+        "DOMAIN,time4.google.com",
+        "DOMAIN,ntp.ubuntu.com",
+        "DOMAIN,time.windows.com",
+        "DOMAIN,ut1-wwv.nist.gov",
+        "DOMAIN,ntp-b.nist.gov",
+        "DOMAIN,ntp-d.nist.gov",
+        "DOMAIN,ntp-wwv.nist.gov",
+        "DOMAIN,time.nist.gov",
+        "DOMAIN,time-a-g.nist.gov",
+        "DOMAIN,time-b-g.nist.gov",
+        "DOMAIN,time-c-g.nist.gov",
+        "DOMAIN,time-d-g.nist.gov",
+        "DOMAIN,time-e-g.nist.gov",
+        "DOMAIN,time-a-b.nist.gov",
+        "DOMAIN,time-b-b.nist.gov",
+        "DOMAIN,time-c-b.nist.gov",
+        "DOMAIN,time-d-b.nist.gov",
+        "DOMAIN,time-e-b.nist.gov",
+        "DOMAIN,time-a-wwv.nist.gov",
+        "DOMAIN,time-b-wwv.nist.gov",
+        "DOMAIN,time-c-wwv.nist.gov",
+        "DOMAIN,time-d-wwv.nist.gov",
+        "DOMAIN,time-e-wwv.nist.gov",
+        "DOMAIN,ntp-c.colorado.edu",
+        "DOMAIN,ut1-time.colorado.edu",
+        "DOMAIN,utcnist.colorado.edu",
+        "DOMAIN,utcnist2.colorado.edu",
+        "DOMAIN,utcnist3.colorado.edu",
+        "DOMAIN,ntp0.ntp-servers.net",
+        "DOMAIN,ntp1.ntp-servers.net",
+        "DOMAIN,ntp2.ntp-servers.net",
+        "DOMAIN,ntp3.ntp-servers.net",
+        "DOMAIN,ntp4.ntp-servers.net",
+        "DOMAIN,ntp5.ntp-servers.net",
+        "DOMAIN,ntp6.ntp-servers.net",
+        "DOMAIN,ntp7.ntp-servers.net",
+        "DOMAIN,ntp.time.nl",
+        "DOMAIN,ntp1.time.nl",
+        "DOMAIN,ntp2.time.nl",
+        "DOMAIN,ntppool1.time.nl",
+        "DOMAIN,ntppool2.time.nl",
+        "DOMAIN-SUFFIX,ntp.se",
+        "DOMAIN-SUFFIX,clock.isc.org",
+        "DOMAIN-SUFFIX,ntp.fiord.ru",
+        "DOMAIN-SUFFIX,ntp.nat.ms",
+        "DOMAIN-SUFFIX,ntp.nic.cz",
+        "DOMAIN-SUFFIX,ntp.ripe.net",
+        "DOMAIN-SUFFIX,ntp.ufe.cz",
+        "DOMAIN-SUFFIX,pool.ntp.org",
+        "DOMAIN-SUFFIX,time.nrc.ca",
+        "DOMAIN-SUFFIX,ntp.nict.jp",
+        "DOMAIN-SUFFIX,ntp2.wakwak.com",
+        "DOMAIN-SUFFIX,ntp1.wakwak.com",
+        "DOMAIN-SUFFIX,ntp.tut.ac.jp",
+        "DOMAIN-SUFFIX,ntp0.ring.gr.jp",
+        "DOMAIN-SUFFIX,ntp1.tohoku.ac.jp",
+        "DOMAIN-SUFFIX,ntp.tohoku.ac.jp",
+        "DOMAIN-SUFFIX,ats1.e-timing.ne.jp",
+        "DOMAIN-SUFFIX,ntp1.ring.gr.jp",
+        "DOMAIN-SUFFIX,ntp2.ring.gr.jp",
+        "DOMAIN-SUFFIX,ntp2.tohoku.ac.jp",
+        "DOMAIN-SUFFIX,ntp-tk02.ocn.ad.jp",
+        "DOMAIN-SUFFIX,ntp-os01.ocn.ad.jp",
+        "DOMAIN-SUFFIX,ntp1.plala.or.jp",
+        "DOMAIN-SUFFIX,ntp2.plala.or.jp",
+        "DOMAIN-SUFFIX,ntp.ring.gr.jp",
+        "DOMAIN-SUFFIX,ntp-tk01.ocn.ad.jp",
+        "DOMAIN-SUFFIX,ntp3.v6.mfeed.ad.jp",
+        "DOMAIN-SUFFIX,s2csntp.miz.nao.ac.jp",
+        "DOMAIN-SUFFIX,ntp.t.ring.gr.jp",
+        "DOMAIN-SUFFIX,ntp.dnsbalance.ring.gr.jp",
+        "DOMAIN-SUFFIX,ntp.nc.u-tokyo.ac.jp",
+        "DOMAIN-SUFFIX,ntp2.v6.mfeed.ad.jp",
+        "DOMAIN-SUFFIX,ntp1.v6.mfeed.ad.jp",
+        "DOMAIN-SUFFIX,ntp3.jst.mfeed.ad.jp",
+        "DOMAIN-SUFFIX,ntp2.jst.mfeed.ad.jp",
+        "DOMAIN-SUFFIX,ntp1.jst.mfeed.ad.jp",
+        "DOMAIN-SUFFIX,ntp.jst.mfeed.ad.jp",
+        "DOMAIN,ntp.aliyun.com",
+        "DOMAIN,ntp1.aliyun.com",
+        "DOMAIN,ntp2.aliyun.com",
+        "DOMAIN,ntp3.aliyun.com",
+        "DOMAIN,ntp4.aliyun.com",
+        "DOMAIN,ntp5.aliyun.com",
+        "DOMAIN,ntp6.aliyun.com",
+        "DOMAIN,ntp7.aliyun.com",
+        "DOMAIN,time.amazonaws.cn",
+        "DOMAIN,time.izatcloud.net",
+        "DOMAIN,time.xtracloud.net",
+        "DOMAIN,izattime.qcomgeo2.com",
+        "DOMAIN,xtratime.qcomgeo2.com",
+        "DOMAIN,ntp.tencent.com",
+        "DOMAIN,ntp1.tencent.com",
+        "DOMAIN,ntp2.tencent.com",
+        "DOMAIN,ntp3.tencent.com",
+        "DOMAIN,ntp4.tencent.com",
+        "DOMAIN,ntp5.tencent.com",
+        "DOMAIN-SUFFIX,cn.pool.ntp.org",
+        "DOMAIN-SUFFIX,ntp.neu.edu.cn",
+        "DOMAIN-SUFFIX,ntp.ntsc.ac.cn",
+        "DOMAIN-SUFFIX,ntp.org.cn",
+        "DOMAIN-SUFFIX,claude403.com",
+        "DOMAIN-SUFFIX,ipleak.net",
+        "DOMAIN-SUFFIX,browserleaks.com",
+        "DOMAIN,stun.l.google.com",
+        "DOMAIN,stun.cloudflare.com",
+        "IP-CIDR,160.79.104.0/21,no-resolve",
+        "IP-ASN,399358,no-resolve",
+        "PROCESS-PATH-REGEX,(?i).*/Claude[.]app/Contents/.*",
+        "PROCESS-NAME-REGEX,(?i)^claude([.]exe)?$",
+        "PROCESS-NAME-REGEX,(?i)^claude helper(.*)?$",
+        "PROCESS-PATH-REGEX,.*/[.]local/share/claude/versions/.*",
+        "DOMAIN-SUFFIX,claude.app",
+        "DOMAIN-SUFFIX,claude.dev",
+        "DOMAIN-SUFFIX,claude.site",
+        "DOMAIN-SUFFIX,modelcontextprotocol.io",
+        "DOMAIN-SUFFIX,challenges.cloudflare.com",
+        "DOMAIN-SUFFIX,dnstest.dev",
+        "DOMAIN-SUFFIX,datadoghq.com"
+      ]
+    },
+    "openai": {
+      "anchors": [
+        "openai.com",
+        "chatgpt.com",
+        "oaistatic.com",
+        "oaiusercontent.com",
+        "sora.com",
+        "oaistatsig.com",
+        "openaimerge.com"
+      ],
+      "rules": [
+        "DOMAIN-SUFFIX,openai.com",
+        "DOMAIN-SUFFIX,chatgpt.com",
+        "DOMAIN-SUFFIX,oaistatic.com",
+        "DOMAIN-SUFFIX,oaiusercontent.com",
+        "DOMAIN-SUFFIX,sora.com",
+        "DOMAIN-SUFFIX,oaistatsig.com",
+        "DOMAIN-SUFFIX,openaimerge.com",
+        "DOMAIN,o207216.ingest.sentry.io",
+        "DOMAIN,o33249.ingest.sentry.io",
+        "DOMAIN,cdn.workos.com",
+        "DOMAIN,forwarder.workos.com",
+        "DOMAIN,frontend-apps-multi-region.workos.com",
+        "DOMAIN,images.workoscdn.com",
+        "DOMAIN,setup.workos.com",
+        "DOMAIN,workos.imgix.net",
+        "DOMAIN,humb.apple.com",
+        "DOMAIN,challenges.cloudflare.com",
+        "DOMAIN,js.intercomcdn.com",
+        "DOMAIN,js.stripe.com",
+        "DOMAIN,rum.browser-intake-datadoghq.com",
+        "PROCESS-PATH-REGEX,(?i)^.*/(ChatGPT|Codex|CodexCLI|WebCodex Desktop)[.]app/.*$",
+        "PROCESS-NAME-REGEX,(?i)^(codex|codex-code-mode-host|chatgpt|webcodex)([.]exe)?$",
+        "IN-NAME,business-openai"
+      ],
+      "port": 17898,
+      "commands": [
+        "codex",
+        "codex-code-mode-host",
+        "chatgpt",
+        "webcodex"
+      ]
+    },
+    "google": {
+      "anchors": [
+        "google.com",
+        "gemini.google.com",
+        "aistudio.google.com",
+        "ai.google.dev",
+        "antigravity.google",
+        "deepmind.com",
+        "deepmind.google",
+        "generativeai.google",
+        "makersuite.google.com",
+        "accounts.google.com",
+        "googleapis.com",
+        "gstatic.com",
+        "googleusercontent.com",
+        "gmail.com",
+        "recaptcha.net"
+      ],
+      "rules": [
+        "DOMAIN-SUFFIX,google.com",
+        "DOMAIN-SUFFIX,gemini.google.com",
+        "DOMAIN-SUFFIX,aistudio.google.com",
+        "DOMAIN-SUFFIX,ai.google.dev",
+        "DOMAIN-SUFFIX,antigravity.google",
+        "DOMAIN-SUFFIX,deepmind.com",
+        "DOMAIN-SUFFIX,deepmind.google",
+        "DOMAIN-SUFFIX,generativeai.google",
+        "DOMAIN-SUFFIX,makersuite.google.com",
+        "DOMAIN-SUFFIX,accounts.google.com",
+        "DOMAIN-SUFFIX,googleapis.com",
+        "DOMAIN-SUFFIX,gstatic.com",
+        "DOMAIN-SUFFIX,googleusercontent.com",
+        "DOMAIN-SUFFIX,gmail.com",
+        "DOMAIN-SUFFIX,recaptcha.net",
+        "PROCESS-PATH-REGEX,(?i)^.*/(Antigravity|Gemini)[.]app/.*$",
+        "PROCESS-NAME-REGEX,(?i)^(antigravity|gemini)([.]exe)?$",
+        "IN-NAME,business-google"
+      ],
+      "port": 17899,
+      "commands": [
+        "antigravity",
+        "gemini"
+      ]
+    },
+    "x": {
+      "anchors": [
+        "x.com",
+        "twitter.com",
+        "t.co",
+        "grok.com",
+        "x.ai",
+        "twimg.com"
+      ],
+      "rules": [
+        "DOMAIN-SUFFIX,x.com",
+        "DOMAIN-SUFFIX,twitter.com",
+        "DOMAIN-SUFFIX,t.co",
+        "DOMAIN-SUFFIX,grok.com",
+        "DOMAIN-SUFFIX,x.ai",
+        "DOMAIN-SUFFIX,twimg.com",
+        "PROCESS-PATH-REGEX,(?i)^.*/(Grok)[.]app/.*$",
+        "PROCESS-NAME-REGEX,(?i)^(grok)([.]exe)?$",
+        "IN-NAME,business-x"
+      ],
+      "port": 17901,
+      "commands": [
+        "grok"
+      ]
+    },
+    "cursor": {
+      "anchors": [
+        "cursor.com",
+        "cursor.sh",
+        "cursorapi.com",
+        "cursor-cdn.com"
+      ],
+      "rules": [
+        "DOMAIN-SUFFIX,cursor.com",
+        "DOMAIN-SUFFIX,cursor.sh",
+        "DOMAIN-SUFFIX,cursorapi.com",
+        "DOMAIN-SUFFIX,cursor-cdn.com",
+        "PROCESS-PATH-REGEX,(?i)^.*/(Cursor)[.]app/.*$",
+        "PROCESS-NAME-REGEX,(?i)^(cursor)([.]exe)?$",
+        "IN-NAME,business-cursor"
+      ],
+      "port": 17902,
+      "commands": [
+        "cursor"
+      ]
+    },
+    "windsurf": {
+      "anchors": [
+        "windsurf.com",
+        "codeium.com",
+        "codeiumdata.com"
+      ],
+      "rules": [
+        "DOMAIN-SUFFIX,windsurf.com",
+        "DOMAIN-SUFFIX,codeium.com",
+        "DOMAIN-SUFFIX,codeiumdata.com",
+        "PROCESS-PATH-REGEX,(?i)^.*/(Windsurf)[.]app/.*$",
+        "PROCESS-NAME-REGEX,(?i)^(windsurf)([.]exe)?$",
+        "IN-NAME,business-windsurf"
+      ],
+      "port": 17903,
+      "commands": [
+        "windsurf"
+      ]
+    },
+    "kiro": {
+      "anchors": [
+        "kiro.dev"
+      ],
+      "rules": [
+        "DOMAIN-SUFFIX,kiro.dev",
+        "PROCESS-PATH-REGEX,(?i)^.*/(Kiro)[.]app/.*$",
+        "PROCESS-NAME-REGEX,(?i)^(kiro)([.]exe)?$",
+        "IN-NAME,business-kiro"
+      ],
+      "port": 17904,
+      "commands": [
+        "kiro"
+      ]
+    },
+    "perplexity": {
+      "anchors": [
+        "perplexity.ai"
+      ],
+      "rules": [
+        "DOMAIN-SUFFIX,perplexity.ai"
+      ]
+    },
+    "mistral": {
+      "anchors": [
+        "mistral.ai"
+      ],
+      "rules": [
+        "DOMAIN-SUFFIX,mistral.ai"
+      ]
+    },
+    "cohere": {
+      "anchors": [
+        "cohere.com",
+        "cohere.ai"
+      ],
+      "rules": [
+        "DOMAIN-SUFFIX,cohere.com",
+        "DOMAIN-SUFFIX,cohere.ai"
+      ]
+    },
+    "midjourney": {
+      "anchors": [
+        "midjourney.com",
+        "discord.com",
+        "discordapp.com",
+        "discord.gg"
+      ],
+      "rules": [
+        "DOMAIN-SUFFIX,midjourney.com",
+        "DOMAIN-SUFFIX,discord.com",
+        "DOMAIN-SUFFIX,discordapp.com",
+        "DOMAIN-SUFFIX,discord.gg"
+      ]
+    },
+    "stability": {
+      "anchors": [
+        "stability.ai",
+        "dreamstudio.ai"
+      ],
+      "rules": [
+        "DOMAIN-SUFFIX,stability.ai",
+        "DOMAIN-SUFFIX,dreamstudio.ai"
+      ]
+    },
+    "meta": {
+      "anchors": [
+        "ai.meta.com",
+        "muse.ai",
+        "meta.ai",
+        "meta.com",
+        "metaaiusercontent.com",
+        "ecto1usercontent.com",
+        "meta-agents-apps.workers.dev",
+        "facebook.com",
+        "instagram.com",
+        "fbcdn.net",
+        "cdninstagram.com",
+        "fbsbx.com"
+      ],
+      "rules": [
+        "DOMAIN-SUFFIX,ai.meta.com",
+        "DOMAIN-SUFFIX,muse.ai",
+        "DOMAIN-SUFFIX,meta.ai",
+        "DOMAIN-SUFFIX,meta.com",
+        "DOMAIN-SUFFIX,metaaiusercontent.com",
+        "DOMAIN-SUFFIX,ecto1usercontent.com",
+        "DOMAIN-SUFFIX,meta-agents-apps.workers.dev",
+        "DOMAIN-SUFFIX,facebook.com",
+        "DOMAIN-SUFFIX,instagram.com",
+        "DOMAIN-SUFFIX,fbcdn.net",
+        "DOMAIN-SUFFIX,cdninstagram.com",
+        "DOMAIN-SUFFIX,fbsbx.com",
+        "PROCESS-PATH-REGEX,(?i)^.*/(Muse)[.]app/.*$",
+        "PROCESS-NAME-REGEX,(?i)^(muse)([.]exe)?$",
+        "IN-NAME,business-meta"
+      ],
+      "port": 17900,
+      "commands": [
+        "muse"
+      ]
+    },
+    "tabbit": {
+      "anchors": [
+        "tabbitbrowser.com",
+        "tabbit.ai"
+      ],
+      "rules": [
+        "DOMAIN-SUFFIX,tabbitbrowser.com",
+        "DOMAIN-SUFFIX,tabbit.ai"
+      ]
+    }
+  }
+}

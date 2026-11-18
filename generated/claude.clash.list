@@ -1,3 +1,4 @@
 # Generated; edit ../claude.list instead.
 DOMAIN-SUFFIX,cleanip.io
+DOMAIN-SUFFIX,ping0.cc
 IP-CIDR,1.1.1.1/32,no-resolve

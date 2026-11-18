@@ -1,5 +1,6 @@
 """Compile three owner lists offline. Python standard library only; never execute input."""
 import argparse
+import ipaddress
 import json
 from pathlib import Path
 import re
@@ -9,6 +10,18 @@ MAX_ENTRIES = 2000
 MAX_BYTES = 262144
 DOMAIN = re.compile(r'(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z](?:[a-z0-9-]{0,61}[a-z0-9])?\Z')
 PROCESS_TYPES = {'PROCESS-NAME', 'PROCESS-NAME-REGEX', 'PROCESS-PATH-REGEX', 'IN-NAME'}
+IP_TYPES = {'IP-CIDR', 'IP-CIDR6'}
+
+
+def parse_address(value):
+    try:
+        address = ipaddress.ip_address(value)
+    except ValueError:
+        return None
+    if ('%' in value or not address.is_global or address.is_multicast or address.is_reserved
+            or getattr(address, 'ipv4_mapped', None) is not None):
+        raise ValueError('Only public unicast IP addresses can be overridden: ' + value)
+    return address
 
 
 def parse(text):
@@ -19,9 +32,15 @@ def parse(text):
         line = line.strip()
         if not line or line.startswith('#'):
             continue
+        if ',' not in line:
+            address = parse_address(line)
+            if address is not None:
+                kind = 'IP-CIDR' if address.version == 4 else 'IP-CIDR6'
+                result.append((kind, address))
+                continue
         parts = line.split(',') if ',' in line else ['DOMAIN-SUFFIX', line]
         if len(parts) != 2 or parts[0] not in ('DOMAIN', 'DOMAIN-SUFFIX'):
-            raise ValueError('Use a domain, DOMAIN,domain or DOMAIN-SUFFIX,domain')
+            raise ValueError('Use a single public IP, a domain, DOMAIN,domain or DOMAIN-SUFFIX,domain')
         kind, host = parts[0], parts[1].strip().lower().rstrip('.')
         if not DOMAIN.fullmatch(host):
             raise ValueError('Invalid domain: ' + host)
@@ -39,9 +58,15 @@ def compile_lists(texts, catalog):
     entries = {group: parse(texts[group]) for group in GROUPS}
     anchors = {anchor: name for name, family in catalog['families'].items() for anchor in family['anchors']}
     assignments = {}
+    ip_owners = {}
     expanded = {group: [] for group in GROUPS}
     for group in GROUPS:
         for kind, host in entries[group]:
+            if kind in IP_TYPES:
+                if ip_owners.setdefault(host, group) != group:
+                    raise ValueError('IP address appears in multiple groups: ' + str(host))
+                expanded[group].append(f'{kind},{host}/{host.max_prefixlen},no-resolve')
+                continue
             labels = host.split('.')
             matches = {anchors[suffix] for i in range(len(labels)) if (suffix := '.'.join(labels[i:])) in anchors}
             for name in matches:
@@ -50,7 +75,15 @@ def compile_lists(texts, catalog):
                 assignments[name] = group
             expanded[group].append(kind + ',' + host)
     for name, group in assignments.items():
-        expanded[group].extend(catalog['families'][name]['rules'])
+        family_rules = catalog['families'][name]['rules']
+        for rule in family_rules:
+            kind, value, *_ = rule.split(',')
+            if kind in IP_TYPES:
+                network = ipaddress.ip_network(value)
+                for address, owner in ip_owners.items():
+                    if owner != group and address in network:
+                        raise ValueError(f'IP address {address} overlaps {name} network {network} in {group}')
+        expanded[group].extend(family_rules)
     # Check the actual expanded domain surface, including overlaps with ordinary entries.
     domain_owners = {}
     keywords = []

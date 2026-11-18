@@ -1,6 +1,7 @@
 # Claude专线：每行使用 DOMAIN-SUFFIX,域名；只填域名，不填 URL 路径。
 # 覆盖根域名和子域名；同一域名只放一份清单。
 DOMAIN-SUFFIX,cleanip.io
+DOMAIN-SUFFIX,ping0.cc
 
 # Ping.uy Claude 检测页的 Cloudflare 出口探测地址
 1.1.1.1

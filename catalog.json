@@ -15,7 +15,6 @@
         "claudemcpcontent.com"
       ],
       "rules": [
-        "DOMAIN,accounts.google.com",
         "DOMAIN-SUFFIX,anthropic.com",
         "DOMAIN-SUFFIX,claude.ai",
         "DOMAIN-SUFFIX,claude.com",
